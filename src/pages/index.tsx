@@ -52,19 +52,37 @@ for forward-thinking organisations.`,
   const featuresText = 'Graphics Design';
   const featuresContent = [
     {
+      icon: 'lni-layout',
+      titel: 'Graphics Design',
+      text: ' Short description for the ones who look for something new.',
+    },
+    {
+      icon: 'lni-bolt',
       titel: 'Graphics Design',
       text: ' Short description for the ones who look for something new.',
     },
     {
       titel: 'Graphics Design',
       text: ' Short description for the ones who look for something new.',
-    },
-    {
-      titel: 'Graphics Design',
-      text: ' Short description for the ones who look for something new.',
+      icon: 'lni-brush',
     },
   ];
-
+  //portfolio
+  const portfolioTitle = 'Featured Works';
+  const portfolioText = `Stop wasting time and money designing and managing a website
+  that doesn’t get results. Happiness guaranteed!`;
+  const portfolioRows = [
+    'branding-4 planning-4',
+    'marketing-4 research-4',
+    'branding-4 marketing-4',
+    'planning-4 research-4',
+    'marketing-4',
+    'planning-4',
+    'research-4',
+    'branding-4 planning-4',
+    'marketing-4',
+  ];
+  const portfolioControl = ['branding', 'marketing', 'planning', 'research'];
   return (
     <>
       <Nav nav={nav}></Nav>
@@ -74,7 +92,12 @@ for forward-thinking organisations.`,
         text={featuresText}
         content={featuresContent}
       />
-      <Portfolio />
+      <Portfolio
+        titel={portfolioTitle}
+        text={portfolioText}
+        rows={portfolioRows}
+        control={portfolioControl}
+      />
       <Pricing />
       <About />
       <Testimonial />

@@ -3,6 +3,7 @@ import { Link } from 'umi';
 interface Person {
   titel: string;
   text: string;
+  icon: string;
 }
 export const Features: React.FC<{
   title: string;
@@ -22,7 +23,7 @@ export const Features: React.FC<{
           </div>
         </div>
         <div className="row justify-content-center">
-          {content.map(({ titel, text }) => {
+          {content.map(({ titel, text, icon }, index) => {
             return (
               <div className="col-lg-4 col-md-7 col-sm-9">
                 <div className="single-features mt-40">
@@ -31,10 +32,10 @@ export const Features: React.FC<{
                       <Link to="#">{titel}</Link>
                     </h4>
                     <div className="features-icon">
-                      <i className="lni lni-brush"></i>
+                      <i className={`lni ${icon}`}></i>
                       <img
                         className="shape"
-                        src={require('../assets/images/f-shape-1.svg')}
+                        src={require(`../assets/images/f-shape-1.svg`)}
                         alt="Shape"
                       />
                     </div>
@@ -52,84 +53,6 @@ export const Features: React.FC<{
               </div>
             );
           })}
-          <div className="col-lg-4 col-md-7 col-sm-9">
-            <div className="single-features mt-40">
-              <div className="features-title-icon d-flex justify-content-between">
-                <h4 className="features-title">
-                  <Link to="#">Graphics Design</Link>
-                </h4>
-                <div className="features-icon">
-                  <i className="lni lni-brush"></i>
-                  <img
-                    className="shape"
-                    src={require('../assets/images/f-shape-1.svg')}
-                    alt="Shape"
-                  />
-                </div>
-              </div>
-              <div className="features-content">
-                <p className="text">
-                  Short description for the ones who look for something new.
-                  Short description for the ones who look for something new.
-                </p>
-                <Link className="features-btn" to="#">
-                  LEARN MORE
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-7 col-sm-9">
-            <div className="single-features mt-40">
-              <div className="features-title-icon d-flex justify-content-between">
-                <h4 className="features-title">
-                  <Link to="#">Website Design</Link>
-                </h4>
-                <div className="features-icon">
-                  <i className="lni lni-layout"></i>
-                  <img
-                    className="shape"
-                    src={require('../assets/images/f-shape-1.svg')}
-                    alt="Shape"
-                  />
-                </div>
-              </div>
-              <div className="features-content">
-                <p className="text">
-                  Short description for the ones who look for something new.
-                  Short description for the ones who look for something new.
-                </p>
-                <Link className="features-btn" to="#">
-                  LEARN MORE
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-7 col-sm-9">
-            <div className="single-features mt-40">
-              <div className="features-title-icon d-flex justify-content-between">
-                <h4 className="features-title">
-                  <Link to="#">Digital Marketing</Link>
-                </h4>
-                <div className="features-icon">
-                  <i className="lni lni-bolt"></i>
-                  <img
-                    className="shape"
-                    src={require('../assets/images/f-shape-1.svg')}
-                    alt="Shape"
-                  />
-                </div>
-              </div>
-              <div className="features-content">
-                <p className="text">
-                  Short description for the ones who look for something new.
-                  Short description for the ones who look for something new.
-                </p>
-                <Link className="features-btn" to="#">
-                  LEARN MORE
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
