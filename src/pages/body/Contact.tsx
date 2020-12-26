@@ -1,7 +1,13 @@
 import React from 'react';
-import { Link } from 'umi';
+
 import { LeaveWord } from './LeaveWord';
-export const Contact = (props: any) => {
+export const Contact: React.FC<{
+  titel: string;
+  text: string;
+  address: string;
+  email: string;
+  phone: string;
+}> = ({ titel, text, address, email, phone }) => {
   const niho = {};
   return (
     <section id="contact" className="contact-area">
@@ -9,11 +15,8 @@ export const Contact = (props: any) => {
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-10">
             <div className="section-title text-center pb-30">
-              <h3 className="title">Contact</h3>
-              <p className="text">
-                Stop wasting time and money designing and managing a website
-                that doesn’t get results. Happiness guaranteed!
-              </p>
+              <h3 className="title">{titel}</h3>
+              <p className="text">{text}</p>
             </div>
           </div>
         </div>
@@ -39,10 +42,7 @@ export const Contact = (props: any) => {
                   <i className="lni lni-map-marker"></i>
                 </div>
                 <div className="contact-info-content media-body">
-                  <p className="text">
-                    {' '}
-                    Elizabeth St, Melbourne<br></br>1202 Australia.
-                  </p>
+                  <p className="text">{address}</p>
                 </div>
               </div>
             </div>
@@ -52,8 +52,8 @@ export const Contact = (props: any) => {
                   <i className="lni lni-envelope"></i>
                 </div>
                 <div className="contact-info-content media-body">
-                  <p className="text">hello@ayroui.com</p>
-                  <p className="text">support@uideck.com</p>
+                  <p className="text">{email}</p>
+                  <p className="text">{email}</p>
                 </div>
               </div>
             </div>
@@ -63,8 +63,8 @@ export const Contact = (props: any) => {
                   <i className="lni lni-phone"></i>
                 </div>
                 <div className="contact-info-content media-body">
-                  <p className="text">+333 789-321-654</p>
-                  <p className="text">+333 985-458-609</p>
+                  <p className="text">{phone}</p>
+                  <p className="text">{phone}</p>
                 </div>
               </div>
             </div>

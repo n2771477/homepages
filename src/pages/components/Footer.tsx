@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'umi';
 
-export const Footer = (props: any) => {
+export const Footer: React.FC<{ email: string; phone: string }> = ({
+  email,
+  phone,
+}) => {
   const niho = {};
   return (
     <>
@@ -37,8 +40,8 @@ export const Footer = (props: any) => {
                 </li>
               </ul>
               <div className="footer-support text-center">
-                <span className="number">+8801234567890</span>
-                <span className="mail">support@uideck.com</span>
+                <span className="number">{phone}</span>
+                <span className="mail">{email}</span>
               </div>
               <div className="copyright text-center mt-35">
                 <p className="text">
