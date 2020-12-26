@@ -4,7 +4,8 @@ export default defineConfig({
   nodeModulesTransform: {
     type: 'none',
   },
-  routes: [
-    { path: '/', component: '@/pages/index' },
-  ],
+  // cssLoaderOptions: { localIdentName: '[local]' },
+  // routes: [
+  //   { path: '/', component: '@/pages/index' },
+  // ],
 });
